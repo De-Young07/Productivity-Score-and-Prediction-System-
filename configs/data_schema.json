@@ -1,0 +1,29 @@
+{
+  "numerical_columns": [
+    "age",
+    "daily_social_media_time",
+    "number_of_notifications",
+    "sleep_hours",
+    "work_hours_per_day",
+    "stress_level",
+    "actual_productivity_score",
+    "days_feeling_burnout_per_month",
+    "coffee_consumption_per_day",
+    "breaks_during_work",
+    "screen_time_before_sleep",
+    "perceived_productivity_score",
+    "weekly_offline_hours",
+    "job_satisfaction_score"
+  ],
+
+  "categorical_columns": [
+    "gender",
+    "job_type",
+    "social_platform_preference"
+  ],
+
+  "boolean_columns": [
+    "uses_focus_apps",
+      "has_digital_wellbeing_enabled"
+  ]
+}

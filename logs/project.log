@@ -1,0 +1,157 @@
+2026-03-09 00:20:41,882 - INFO - ===== PIPELINE STARTED =====
+2026-03-09 00:20:41,882 - INFO - Starting Phase 1: Data Ingestion
+2026-03-09 00:20:41,883 - INFO - Loading dataset
+2026-03-09 00:20:42,142 - INFO - Dataset shape: (30000, 19)
+2026-03-09 00:20:42,143 - INFO - Columns: ['age', 'gender', 'job_type', 'daily_social_media_time', 'social_platform_preference', 'number_of_notifications', 'work_hours_per_day', 'perceived_productivity_score', 'actual_productivity_score', 'stress_level', 'sleep_hours', 'screen_time_before_sleep', 'breaks_during_work', 'uses_focus_apps', 'has_digital_wellbeing_enabled', 'coffee_consumption_per_day', 'days_feeling_burnout_per_month', 'weekly_offline_hours', 'job_satisfaction_score']
+2026-03-09 00:20:43,304 - INFO - Raw dataset saved to Datasets/raw\productivity_raw.csv
+2026-03-09 00:20:43,305 - INFO - Data ingestion completed
+2026-03-09 00:20:43,307 - INFO - Starting Phase 2: Data Validation
+2026-03-09 00:20:43,307 - INFO - PHASE 2 STARTED
+2026-03-09 00:20:43,563 - INFO - Dataset loaded for validation: (30000, 19)
+2026-03-09 00:20:43,565 - INFO - Schema validation passed
+2026-03-09 00:20:43,565 - INFO - Schema validation completed
+2026-03-09 00:20:43,565 - INFO - Starting missing value analysis
+2026-03-09 00:20:43,585 - INFO - Missing value report saved to reports/missing_values_report.csv
+2026-03-09 00:20:43,585 - INFO - Missing value analysis completed
+2026-03-09 00:20:43,585 - INFO - Starting outlier detection
+2026-03-09 00:20:43,687 - INFO - Outlier report saved to reports/outlier_report.csv
+2026-03-09 00:20:43,688 - INFO - Outlier detection completed
+2026-03-09 00:20:43,689 - INFO - PHASE 2 FINISHED
+2026-03-09 00:20:43,690 - INFO - Starting Phase 3: Data Preprocessing
+2026-03-09 00:20:43,691 - INFO - PHASE 3: DATA PREPROCESSING STARTED
+2026-03-09 00:20:43,936 - INFO - Splitting dataset into train and test
+2026-03-09 00:20:43,956 - INFO - Train shape: (24000, 19)
+2026-03-09 00:20:43,956 - INFO - Test shape: (6000, 19)
+2026-03-09 00:20:43,956 - INFO - Starting missing value imputation
+2026-03-09 00:20:44,014 - INFO - Imputation completed
+2026-03-09 00:20:44,014 - INFO - Starting missing value imputation
+2026-03-09 00:20:44,036 - INFO - Imputation completed
+2026-03-09 00:20:44,037 - INFO - Creating engineered features
+2026-03-09 00:20:44,041 - INFO - Feature engineering completed
+2026-03-09 00:20:44,042 - INFO - Creating engineered features
+2026-03-09 00:20:44,044 - INFO - Feature engineering completed
+2026-03-09 00:20:44,045 - INFO - Encoding categorical variables
+2026-03-09 00:20:44,097 - INFO - Encoding completed
+2026-03-09 00:20:44,099 - INFO - Encoding categorical variables
+2026-03-09 00:20:44,121 - INFO - Encoding completed
+2026-03-09 00:20:45,685 - INFO - Processed datasets saved
+2026-03-09 00:20:45,685 - INFO - PHASE 3 COMPLETED
+2026-03-09 00:20:45,689 - INFO - Starting Phase 4: Model Training
+2026-03-09 00:20:45,689 - INFO - PHASE 4: MODEL TRAINING STARTED
+2026-03-09 00:20:45,689 - INFO - Training Random Forest model
+2026-03-09 00:23:07,667 - INFO - Random Forest training completed
+2026-03-09 00:23:07,674 - INFO - Training XGBoost model
+2026-03-09 00:23:11,117 - INFO - XGBoost training completed
+2026-03-09 00:23:11,126 - INFO - Model evaluation saved
+2026-03-09 00:23:11,127 - INFO - PHASE 4 COMPLETED
+2026-03-09 00:23:11,127 - INFO - ===== PIPELINE COMPLETED SUCCESSFULLY =====
+2026-03-09 01:00:07,029 - INFO - ===== PIPELINE STARTED =====
+2026-03-09 01:00:07,029 - INFO - Starting Phase 1: Data Ingestion
+2026-03-09 01:00:07,031 - INFO - Loading dataset
+2026-03-09 01:00:07,361 - INFO - Dataset shape: (30000, 19)
+2026-03-09 01:00:07,361 - INFO - Columns: ['age', 'gender', 'job_type', 'daily_social_media_time', 'social_platform_preference', 'number_of_notifications', 'work_hours_per_day', 'perceived_productivity_score', 'actual_productivity_score', 'stress_level', 'sleep_hours', 'screen_time_before_sleep', 'breaks_during_work', 'uses_focus_apps', 'has_digital_wellbeing_enabled', 'coffee_consumption_per_day', 'days_feeling_burnout_per_month', 'weekly_offline_hours', 'job_satisfaction_score']
+2026-03-09 01:00:08,584 - INFO - Raw dataset saved to Datasets/raw\productivity_raw.csv
+2026-03-09 01:00:08,584 - INFO - Data ingestion completed
+2026-03-09 01:00:08,586 - INFO - Starting Phase 2: Data Validation
+2026-03-09 01:00:08,586 - INFO - PHASE 2 STARTED
+2026-03-09 01:00:08,926 - INFO - Dataset loaded for validation: (30000, 19)
+2026-03-09 01:00:08,928 - INFO - Schema validation passed
+2026-03-09 01:00:08,928 - INFO - Schema validation completed
+2026-03-09 01:00:08,928 - INFO - Starting missing value analysis
+2026-03-09 01:00:08,948 - INFO - Missing value report saved to reports/missing_values_report.csv
+2026-03-09 01:00:08,949 - INFO - Missing value analysis completed
+2026-03-09 01:00:08,949 - INFO - Starting outlier detection
+2026-03-09 01:00:09,061 - INFO - Outlier report saved to reports/outlier_report.csv
+2026-03-09 01:00:09,062 - INFO - Outlier detection completed
+2026-03-09 01:00:09,062 - INFO - PHASE 2 FINISHED
+2026-03-09 01:00:09,063 - INFO - Starting Phase 3: Data Preprocessing
+2026-03-09 01:00:09,064 - INFO - PHASE 3: DATA PREPROCESSING STARTED
+2026-03-09 01:00:09,336 - INFO - Splitting dataset into train and test
+2026-03-09 01:00:09,359 - INFO - Train shape: (24000, 19)
+2026-03-09 01:00:09,360 - INFO - Test shape: (6000, 19)
+2026-03-09 01:00:09,360 - INFO - Starting missing value imputation
+2026-03-09 01:00:09,424 - INFO - Imputation completed
+2026-03-09 01:00:09,425 - INFO - Starting missing value imputation
+2026-03-09 01:00:09,450 - INFO - Imputation completed
+2026-03-09 01:00:09,451 - INFO - Creating engineered features
+2026-03-09 01:00:09,457 - INFO - Feature engineering completed
+2026-03-09 01:00:09,457 - INFO - Creating engineered features
+2026-03-09 01:00:09,460 - INFO - Feature engineering completed
+2026-03-09 01:00:09,461 - INFO - Encoding categorical variables
+2026-03-09 01:00:09,514 - INFO - Encoding completed
+2026-03-09 01:00:09,515 - INFO - Encoding categorical variables
+2026-03-09 01:00:09,537 - INFO - Encoding completed
+2026-03-09 01:00:11,274 - INFO - Processed datasets saved
+2026-03-09 01:00:11,275 - INFO - PHASE 3 COMPLETED
+2026-03-09 01:00:11,278 - INFO - Starting Phase 4: Model Training
+2026-03-09 01:00:11,278 - INFO - PHASE 4: MODEL TRAINING STARTED
+2026-03-09 01:00:11,278 - INFO - Training Random Forest model
+2026-03-09 01:02:42,651 - INFO - Random Forest training completed
+2026-03-09 01:02:42,659 - INFO - Training XGBoost model
+2026-03-09 01:02:46,724 - INFO - XGBoost training completed
+2026-03-09 01:02:46,735 - INFO - Model evaluation saved
+2026-03-09 01:02:46,735 - INFO - PHASE 4 COMPLETED
+2026-03-09 01:02:46,736 - INFO - Starting Phase 5: Evaluation & Insights
+2026-03-09 01:02:46,736 - INFO - PHASE 4: MODEL TRAINING STARTED
+2026-03-09 01:02:46,736 - INFO - Training Random Forest model
+2026-03-09 01:05:17,444 - INFO - Random Forest training completed
+2026-03-09 01:05:17,452 - INFO - Training XGBoost model
+2026-03-09 01:05:21,218 - INFO - XGBoost training completed
+2026-03-09 01:05:21,227 - INFO - Model evaluation saved
+2026-03-09 01:05:21,228 - INFO - PHASE 4 COMPLETED
+2026-03-09 01:05:21,228 - INFO - ===== PIPELINE COMPLETED SUCCESSFULLY =====
+2026-03-09 01:21:37,440 | __main__ | INFO | ===== PIPELINE STARTED =====
+2026-03-09 01:21:37,447 | __main__ | INFO | Starting Phase 1: Data Ingestion
+2026-03-09 01:21:37,448 | src.ingestion.load_data | INFO | Loading dataset
+2026-03-09 01:21:38,218 | src.ingestion.load_data | INFO | Dataset shape: (30000, 19)
+2026-03-09 01:21:38,218 | src.ingestion.load_data | INFO | Columns: ['age', 'gender', 'job_type', 'daily_social_media_time', 'social_platform_preference', 'number_of_notifications', 'work_hours_per_day', 'perceived_productivity_score', 'actual_productivity_score', 'stress_level', 'sleep_hours', 'screen_time_before_sleep', 'breaks_during_work', 'uses_focus_apps', 'has_digital_wellbeing_enabled', 'coffee_consumption_per_day', 'days_feeling_burnout_per_month', 'weekly_offline_hours', 'job_satisfaction_score']
+2026-03-09 01:21:39,241 | src.ingestion.load_data | INFO | Raw dataset saved to Datasets/raw\productivity_raw.csv
+2026-03-09 01:21:39,241 | src.ingestion.load_data | INFO | Data ingestion completed
+2026-03-09 01:21:39,243 | __main__ | INFO | Starting Phase 2: Data Validation
+2026-03-09 01:21:39,243 | src.validation.run_validation | INFO | PHASE 2 STARTED
+2026-03-09 01:21:40,129 | src.validation.run_validation | INFO | Dataset loaded for validation: (30000, 19)
+2026-03-09 01:21:40,160 | src.validation.schema_validator | INFO | Schema validation passed
+2026-03-09 01:21:40,160 | src.validation.run_validation | INFO | Schema validation completed
+2026-03-09 01:21:40,161 | src.validation.missing_value_analysis | INFO | Starting missing value analysis
+2026-03-09 01:21:40,212 | src.validation.missing_value_analysis | INFO | Missing value report saved to reports/missing_values_report.csv
+2026-03-09 01:21:40,213 | src.validation.run_validation | INFO | Missing value analysis completed
+2026-03-09 01:21:40,213 | src.validation.outlier_detection | INFO | Starting outlier detection
+2026-03-09 01:21:40,382 | src.validation.outlier_detection | INFO | Outlier report saved to reports/outlier_report.csv
+2026-03-09 01:21:40,394 | src.validation.run_validation | INFO | Outlier detection completed
+2026-03-09 01:21:40,394 | src.validation.run_validation | INFO | PHASE 2 FINISHED
+2026-03-09 01:21:40,395 | __main__ | INFO | Starting Phase 3: Data Preprocessing
+2026-03-09 01:21:40,396 | src.preprocessing.run_preprocessing | INFO | PHASE 3: DATA PREPROCESSING STARTED
+2026-03-09 01:21:40,623 | src.preprocessing.split_data | INFO | Splitting dataset into train and test
+2026-03-09 01:21:40,682 | src.preprocessing.split_data | INFO | Train shape: (24000, 19)
+2026-03-09 01:21:40,682 | src.preprocessing.split_data | INFO | Test shape: (6000, 19)
+2026-03-09 01:21:40,683 | src.preprocessing.imputation | INFO | Starting missing value imputation
+2026-03-09 01:21:40,892 | src.preprocessing.imputation | INFO | Imputation completed
+2026-03-09 01:21:40,893 | src.preprocessing.imputation | INFO | Starting missing value imputation
+2026-03-09 01:21:40,913 | src.preprocessing.imputation | INFO | Imputation completed
+2026-03-09 01:21:40,913 | src.preprocessing.feature_engineering | INFO | Creating engineered features
+2026-03-09 01:21:40,917 | src.preprocessing.feature_engineering | INFO | Feature engineering completed
+2026-03-09 01:21:40,917 | src.preprocessing.feature_engineering | INFO | Creating engineered features
+2026-03-09 01:21:40,920 | src.preprocessing.feature_engineering | INFO | Feature engineering completed
+2026-03-09 01:21:40,920 | src.preprocessing.encoding | INFO | Encoding categorical variables
+2026-03-09 01:21:41,025 | src.preprocessing.encoding | INFO | Encoding completed
+2026-03-09 01:21:41,026 | src.preprocessing.encoding | INFO | Encoding categorical variables
+2026-03-09 01:21:41,044 | src.preprocessing.encoding | INFO | Encoding completed
+2026-03-09 01:21:42,448 | src.preprocessing.run_preprocessing | INFO | Processed datasets saved
+2026-03-09 01:21:42,449 | src.preprocessing.run_preprocessing | INFO | PHASE 3 COMPLETED
+2026-03-09 01:21:42,451 | __main__ | INFO | Starting Phase 4: Model Training
+2026-03-09 01:21:42,452 | src.training.run_training | INFO | PHASE 4: MODEL TRAINING STARTED
+2026-03-09 01:21:42,452 | src.training.train_random_forest | INFO | Training Random Forest model
+2026-03-09 01:23:58,335 | src.training.train_random_forest | INFO | Random Forest training completed
+2026-03-09 01:23:58,351 | src.training.train_xgboost | INFO | Training XGBoost model
+2026-03-09 01:24:02,014 | src.training.train_xgboost | INFO | XGBoost training completed
+2026-03-09 01:24:02,023 | src.training.run_training | INFO | Model evaluation saved
+2026-03-09 01:24:02,024 | src.training.run_training | INFO | PHASE 4 COMPLETED
+2026-03-09 01:24:02,024 | __main__ | INFO | Starting Phase 5: Evaluation & Insights
+2026-03-09 01:24:02,024 | src.training.run_training | INFO | PHASE 4: MODEL TRAINING STARTED
+2026-03-09 01:24:02,024 | src.training.train_random_forest | INFO | Training Random Forest model
+2026-03-09 01:26:08,040 | src.training.train_random_forest | INFO | Random Forest training completed
+2026-03-09 01:26:08,046 | src.training.train_xgboost | INFO | Training XGBoost model
+2026-03-09 01:26:11,281 | src.training.train_xgboost | INFO | XGBoost training completed
+2026-03-09 01:26:11,291 | src.training.run_training | INFO | Model evaluation saved
+2026-03-09 01:26:11,291 | src.training.run_training | INFO | PHASE 4 COMPLETED
+2026-03-09 01:26:11,291 | __main__ | INFO | ===== PIPELINE COMPLETED SUCCESSFULLY =====
