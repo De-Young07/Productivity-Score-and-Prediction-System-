@@ -1,23 +1,29 @@
+from src.training.experiment_tracking import setup_experiment
+from src.training.tune_random_forest import tune_random_forest
+from src.training.tune_xgboost import tune_xgboost
 from src.training.train_random_forest import train_random_forest
 from src.training.train_xgboost import train_xgboost
-from src.training.evaluate_models import save_metrics
+from src.training.compare_models import compare_models
 
-from src.utils.logger import get_logger
-
-logger = get_logger(__name__)
 
 def run_training():
 
-    logger.info("PHASE 4: MODEL TRAINING STARTED")
+    setup_experiment()
 
-    rf_metrics = train_random_forest()
+    rf_params = tune_random_forest()
+    xgb_params = tune_xgboost()
 
-    xgb_metrics = train_xgboost()
+    rf_rmse, rf_r2 = train_random_forest(rf_params)
+    xgb_rmse, xgb_r2 = train_xgboost(xgb_params)
 
-    results = save_metrics(rf_metrics, xgb_metrics)
+    results = [
+        {"model": "RandomForest", "rmse": rf_rmse, "r2": rf_r2},
+        {"model": "XGBoost", "rmse": xgb_rmse, "r2": xgb_r2}
+    ]
 
-    logger.info("Model evaluation saved")
+    comparison_table, best_model = compare_models(results)
 
-    logger.info("PHASE 4 COMPLETED")
+    print(comparison_table)
+    print("Best model:", best_model)
 
-    return results
+    return best_model

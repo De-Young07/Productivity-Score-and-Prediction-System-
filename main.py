@@ -1,22 +1,22 @@
-from src.ingestion.load_data import run_ingestion
-from src.validation.run_validation import run_validation
-from src.preprocessing.run_preprocessing import run_preprocessing
-from src.training.run_training import run_training
-from src.evaluation.run_evaluation import run_evaluation
-
-
-from src.utils.logger import get_logger
-import traceback
-
 import sys
 import os
 from pathlib import Path
+from src.utils.logger import get_logger
+import traceback
 
 # Resolve project root
 ROOT_DIR = Path(__file__).resolve().parent
 sys.path.append(str(ROOT_DIR))
 
 logger = get_logger(__name__)
+
+
+from src.ingestion.load_data import run_ingestion
+from src.validation.run_validation import run_validation
+from src.preprocessing.run_preprocessing import run_preprocessing
+from src.training.run_training import run_training
+from src.evaluation.run_evaluation import run_evaluation
+
 
 def main():
 
@@ -37,7 +37,12 @@ def main():
         run_training()
 
         logger.info("Starting Phase 5: Evaluation & Insights")
-        run_training()
+        results = run_evaluation()
+
+        print(results)
+    
+        print("Phase 5b: Explainability")
+        run_explainability()
 
         logger.info("===== PIPELINE COMPLETED SUCCESSFULLY =====")
 

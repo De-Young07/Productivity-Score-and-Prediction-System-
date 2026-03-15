@@ -1,0 +1,23 @@
+artifact_path: file:C:\Users\USER\Projects\Productivity Score Prediction System\mlruns/783315178797131237/models/m-c6032d9e4c7e4676873ec6f24d4e6b17/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.13.9
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.7.2
+    skops_trusted_types: null
+mlflow_version: 3.9.0
+model_id: m-c6032d9e4c7e4676873ec6f24d4e6b17
+model_size_bytes: 1367646
+model_uuid: m-c6032d9e4c7e4676873ec6f24d4e6b17
+prompts: null
+run_id: b3db47c8c15f4929a9197660968f5957
+utc_time_created: '2026-03-15 08:08:28.737322'

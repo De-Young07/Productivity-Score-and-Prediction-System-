@@ -1,44 +1,57 @@
+import mlflow
 import pandas as pd
 import joblib
 import numpy as np
 
+from sklearn.pipeline import Pipeline
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_squared_error, r2_score
 
-from src.utils.logger import get_logger
+from src.preprocessing.build_features import build_preprocessing_pipeline
+from src.utils.paths import MODELS_DIR, TRAIN_DATA, TEST_DATA
 
-logger = get_logger(__name__)
 
-def train_random_forest():
+def train_random_forest(params):
 
-    logger.info("Training Random Forest model")
-
-    train = pd.read_csv("Datasets/processed/train.csv")
-    test = pd.read_csv("Datasets/processed/test.csv")
-
+    train_df = pd.read_csv(TRAIN_DATA)
+    test_df = pd.read_csv(TEST_DATA)
+    
     target = "actual_productivity_score"
+    
+    X_train = train_df.drop(columns=[target])
+    y_train = train_df[target]
+    
+    X_test = test_df.drop(columns=[target])
+    y_test = test_df[target]
 
-    X_train = train.drop(columns=[target])
-    y_train = train[target]
+    model = RandomForestRegressor(**params, random_state=42)
 
-    X_test = test.drop(columns=[target])
-    y_test = test[target]
+    preprocessor = build_preprocessing_pipeline(train_df, target)
 
-    model = RandomForestRegressor(
-        n_estimators=200,
-        max_depth=10,
-        random_state=42
+    pipeline = Pipeline(
+        steps=[
+            ("preprocessor", preprocessor),
+            ("model", model)
+        ]
     )
 
-    model.fit(X_train, y_train)
+    pipeline.fit(X_train, y_train)
 
-    predictions = model.predict(X_test)
+    preds = pipeline.predict(X_test)
 
-    rmse = np.sqrt(mean_squared_error(y_test, predictions))
-    r2 = r2_score(y_test, predictions)
+    rmse = np.sqrt(mean_squared_error(y_test, preds))
+    r2 = r2_score(y_test, preds)
 
-    joblib.dump(model, "models/random_forest_model.pkl")
+    with mlflow.start_run():
 
-    logger.info("Random Forest training completed")
+        mlflow.log_params(params)
+        mlflow.log_metric("rmse", rmse)
+        mlflow.log_metric("r2", r2)
+
+        mlflow.sklearn.log_model(pipeline, "random_forest_model")
+
+    MODELS_DIR.mkdir(exist_ok=True)
+
+    joblib.dump(pipeline, MODELS_DIR / "random_forest.pkl")
 
     return rmse, r2

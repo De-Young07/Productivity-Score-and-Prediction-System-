@@ -1,8 +1,6 @@
 import pandas as pd
 import os
 from src.utils.logger import get_logger
-from pathlib import Path
-
 
 logger = get_logger(__name__)
 
@@ -32,10 +30,9 @@ def save_raw_dataset(df):
 
 def run_ingestion():
 
-    ROOT_DIR = Path(__file__).resolve().parents[2]
-    data_path = ROOT_DIR / "Datasets" / "raw" / "social_media_vs_productivity.csv"
-    
-    df = load_raw_dataset(data_path)
+    input_file = "Datasets/raw/social_media_vs_productivity.csv"
+
+    df = load_raw_dataset(input_file)
 
     save_raw_dataset(df)
 
@@ -44,7 +41,3 @@ def run_ingestion():
 
 if __name__ == "__main__":
     run_ingestion()
-
-
-
-

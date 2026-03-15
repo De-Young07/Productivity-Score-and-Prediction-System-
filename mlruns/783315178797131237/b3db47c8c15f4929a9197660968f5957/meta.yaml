@@ -1,0 +1,14 @@
+artifact_uri: file:C:\Users\USER\Projects\Productivity Score Prediction System\mlruns/783315178797131237/b3db47c8c15f4929a9197660968f5957/artifacts
+end_time: 1773562786375
+entry_point_name: ''
+experiment_id: '783315178797131237'
+lifecycle_stage: active
+run_id: b3db47c8c15f4929a9197660968f5957
+run_name: illustrious-swan-715
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1773562098289
+status: 3
+tags: []
+user_id: USER

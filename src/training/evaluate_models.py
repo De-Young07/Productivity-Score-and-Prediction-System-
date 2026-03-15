@@ -1,16 +1,35 @@
 import pandas as pd
-import os
+from sklearn.metrics import mean_squared_error, r2_score
+import joblib
 
-def save_metrics(rf_metrics, xgb_metrics):
+from src.utils.paths import MODELS_DIR, TEST_DATA
 
-    os.makedirs("reports", exist_ok=True)
+def run_evaluation():
 
-    results = pd.DataFrame({
-        "Model": ["Random Forest", "XGBoost"],
-        "RMSE": [rf_metrics[0], xgb_metrics[0]],
-        "R2 Score": [rf_metrics[1], xgb_metrics[1]]
-    })
+    test_df = pd.read_csv(TEST_DATA)
+    
+    target = "actual_productivity_score"
 
-    results.to_csv("reports/model_metrics.csv", index=False)
+    X_test = test_df.drop(columns=[target])
+    y_test = test_df[target]
 
-    return results
+    results = []
+
+    for model_name in ["random_forest.pkl","xgboost.pkl"]:
+
+        model = joblib.load(MODELS_DIR / model_name)
+
+        preds = model.predict(X_test)
+
+        rmse = np.sqrt(mean_squared_error(y_test, preds))
+        r2 = r2_score(y_test, preds)
+
+        results.append({
+            "model":model_name,
+            "rmse":rmse,
+            "r2":r2
+        })
+
+    df = pd.DataFrame(results)
+
+    return df

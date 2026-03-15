@@ -1,0 +1,10 @@
+artifact_location: file:C:\Users\USER\Projects\Productivity Score Prediction System\mlruns/783315178797131237/models/m-f2b12f5698b946809e810690606c3832/artifacts
+creation_timestamp: 1773562790838
+experiment_id: '783315178797131237'
+last_updated_timestamp: 1773562861271
+model_id: m-f2b12f5698b946809e810690606c3832
+model_type: null
+name: xgboost_model
+source_run_id: cf711c6d46eb42a08fe8fb38cae03fa2
+status: 2
+status_message: null

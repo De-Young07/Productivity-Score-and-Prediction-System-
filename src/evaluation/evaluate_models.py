@@ -7,12 +7,12 @@ ROOT = Path(__file__).resolve().parents[2]
 
 def evaluate_models():
 
-    test_path = ROOT / "data" / "processed" / "test_data.csv"
+    test_path = ROOT / "Datasets" / "processed" / "test_data.csv"
 
     df = pd.read_csv(test_path)
 
-    X_test = df.drop(columns=["productivity_score"])
-    y_test = df["productivity_score"]
+    X_test = df.drop(columns=["actual_productivity_score"])
+    y_test = df["actual_productivity_score"]
 
     rf_model = joblib.load(ROOT / "models" / "random_forest_model.pkl")
     xgb_model = joblib.load(ROOT / "models" / "xgboost_model.pkl")

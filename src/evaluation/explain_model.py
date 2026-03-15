@@ -7,9 +7,9 @@ ROOT = Path(__file__).resolve().parents[2]
 
 def feature_importance():
 
-    data = pd.read_csv(ROOT / "data" / "processed" / "train_data.csv")
+    data = pd.read_csv(ROOT / "Datasets" / "processed" / "train_data.csv")
 
-    X = data.drop(columns=["productivity_score"])
+    X = data.drop(columns=["actual_productivity_score"])
 
     model = joblib.load(ROOT / "models" / "xgboost_model.pkl")
 
