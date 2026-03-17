@@ -14,3 +14,7 @@ TEST_DATA = PROCESSED_DIR / "test.csv"
 MODELS_DIR = PROJECT_ROOT / "models"
 REPORTS_DIR = PROJECT_ROOT / "reports"
 LOG_DIR = PROJECT_ROOT / "logs"
+FIGURES_DIR = REPORTS_DIR / "figures"
+
+REPORTS_DIR.mkdir(exist_ok=True)
+FIGURES_DIR.mkdir(exist_ok=True)

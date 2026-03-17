@@ -39,11 +39,6 @@ def main():
         logger.info("Starting Phase 5: Evaluation & Insights")
         results = run_evaluation()
 
-        print(results)
-    
-        print("Phase 5b: Explainability")
-        run_explainability()
-
         logger.info("===== PIPELINE COMPLETED SUCCESSFULLY =====")
 
     except Exception as e:

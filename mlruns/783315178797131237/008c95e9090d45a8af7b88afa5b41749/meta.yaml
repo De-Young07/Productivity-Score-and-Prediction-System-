@@ -1,0 +1,14 @@
+artifact_uri: file:C:\Users\USER\Projects\Productivity Score Prediction System\mlruns/783315178797131237/008c95e9090d45a8af7b88afa5b41749/artifacts
+end_time: 1773670055559
+entry_point_name: ''
+experiment_id: '783315178797131237'
+lifecycle_stage: active
+run_id: 008c95e9090d45a8af7b88afa5b41749
+run_name: glamorous-ox-162
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1773670005833
+status: 3
+tags: []
+user_id: USER

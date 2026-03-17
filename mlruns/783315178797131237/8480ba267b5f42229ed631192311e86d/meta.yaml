@@ -1,0 +1,14 @@
+artifact_uri: file:C:\Users\USER\Projects\Productivity Score Prediction System\mlruns/783315178797131237/8480ba267b5f42229ed631192311e86d/artifacts
+end_time: 1773670002923
+entry_point_name: ''
+experiment_id: '783315178797131237'
+lifecycle_stage: active
+run_id: 8480ba267b5f42229ed631192311e86d
+run_name: polite-carp-64
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1773669762878
+status: 3
+tags: []
+user_id: USER

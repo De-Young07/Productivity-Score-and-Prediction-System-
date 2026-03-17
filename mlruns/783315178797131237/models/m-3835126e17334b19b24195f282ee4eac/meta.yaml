@@ -1,0 +1,10 @@
+artifact_location: file:C:\Users\USER\Projects\Productivity Score Prediction System\mlruns/783315178797131237/models/m-3835126e17334b19b24195f282ee4eac/artifacts
+creation_timestamp: 1773669764356
+experiment_id: '783315178797131237'
+last_updated_timestamp: 1773670002707
+model_id: m-3835126e17334b19b24195f282ee4eac
+model_type: null
+name: random_forest_model
+source_run_id: 8480ba267b5f42229ed631192311e86d
+status: 2
+status_message: null

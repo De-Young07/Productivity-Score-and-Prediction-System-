@@ -1,0 +1,26 @@
+
+Model Evaluation Summary
+------------------------
+
+Best performing model: XGBoost
+
+Top productivity drivers:
+1. perceived_productivity_score
+2. job_satisfaction_score
+3. uses_focus_apps
+
+Interpretation
+--------------
+
+Productivity outcomes are strongly influenced by behavioral patterns
+related to digital usage.
+
+Higher social media engagement correlates negatively with productivity
+while structured time allocation correlates positively.
+
+Practical Implications
+----------------------
+
+• Reduce time spent on distracting social platforms
+• Encourage structured work sessions
+• Track digital behavior patterns

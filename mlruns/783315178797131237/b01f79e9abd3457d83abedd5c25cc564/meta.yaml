@@ -1,0 +1,14 @@
+artifact_uri: file:C:\Users\USER\Projects\Productivity Score Prediction System\mlruns/783315178797131237/b01f79e9abd3457d83abedd5c25cc564/artifacts
+end_time: 1773623141992
+entry_point_name: ''
+experiment_id: '783315178797131237'
+lifecycle_stage: active
+run_id: b01f79e9abd3457d83abedd5c25cc564
+run_name: unleashed-conch-348
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1773623010664
+status: 3
+tags: []
+user_id: USER

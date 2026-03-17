@@ -17,8 +17,6 @@ from src.preprocessing.run_preprocessing import run_preprocessing
 from src.training.run_training import run_training
 from src.evaluation.run_evaluation import run_evaluation
 
-from src.utils.paths import PROJECT_ROOT
-print("Project root:", PROJECT_ROOT)
 
 def main():
 
@@ -39,7 +37,7 @@ def main():
         run_training()
 
         logger.info("Starting Phase 5: Evaluation & Insights")
-        run_training()
+        results = run_evaluation()
 
         logger.info("===== PIPELINE COMPLETED SUCCESSFULLY =====")
 
